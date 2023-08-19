@@ -38,6 +38,8 @@ const p = new Pessoa()
 p.nome = 'Edson'
 console.log(p)
 
+//função e classe no final das contas é a mesma coisa
+//no javascript
 class Aluno{
 
 }
