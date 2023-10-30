@@ -99,15 +99,23 @@
             let thId = document.createElement('th')
             let tdNome = document.createElement('td')
             let tdEmail = document.createElement('td')
+            let tdExcluir = document.createElement('td')
 
             thId.textContent = cli.id
             tdNome.textContent = cli.nome
             tdEmail.textContent = cli.email
+            tdExcluir.innerHTML = `<button type="button" class="btn btn-outline-danger" onclick="excluir(${cli.id})"><i class="bi bi-eraser-fill"></i> Excluir</button>`
+
             tr.appendChild(thId)
             tr.appendChild(tdNome)
             tr.appendChild(tdEmail)
+            tr.appendChild(tdExcluir)
             tbody.appendChild(tr)
         });
+        
+    }
+    function excluir(id) {
+            alert('id:' +id)
     }
     function pesquisar() {
         let textoPesquisa = document.querySelector('#txtPesquisar').value;
